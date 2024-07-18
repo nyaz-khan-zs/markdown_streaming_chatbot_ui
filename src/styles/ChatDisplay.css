@@ -1,0 +1,40 @@
+.ChatDisplay {
+  width: 80%;
+  max-width: 1080px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.markdown-content-wrapper {
+  position: relative;
+  height: 77vh;
+  overflow: auto;
+}
+
+.typing-animation {
+  position: absolute;
+
+  right: 0;
+  height: 1em;
+  width: 1em;
+  border-radius: 50%;
+  background-color: #000;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.typing-animation.active {
+  animation: typing 1s steps(10, end) infinite;
+  opacity: 1;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 1em;
+  }
+}
